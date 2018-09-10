@@ -65,4 +65,4 @@ This was tricky because I started by using the numbers from the lectures on the 
 Below is a link to the video. During the straight part, the D factor helps the car not steer many times. Then a few seconds later when the car gets to the curve, it is the P factor that is high enough to output a steering angle capable of navigating the curve.
 
 
-[Car In Action](https://github.com/leclair-7/CarND-PID-Control-Project/PID_in_action.mp4)
+[Car In Action](https://github.com/leclair-7/CarND-PID-Control-Project/blob/master/PID_in_action.mp4)
