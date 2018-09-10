@@ -3,13 +3,7 @@
 #include <deque> 
 class PID {
 public:
-  /*
-  * Errors
-  */
-  std::deque<double> integ_error_queue;
-  int int_capacity;
-  double integral_sum;
-
+  
   double p_error;
   double i_error;
   double d_error;
@@ -20,19 +14,24 @@ public:
   double Kp;
   double Ki;
   double Kd;
-  double velocity;
+  
   double cte;
   /*
   * Is initialized
   */
   bool is_initialized;
   
-  
-  int numruns;
-  double error_curr;
-  double weighted_error;
+  /*
+  *  Previous Error
+  */
   double cte_prev;
 
+  /*
+  * Integral Error helpers
+  */
+  std::deque<double> integ_error_queue;
+  int int_capacity;
+  double integral_sum;
   
   /*
   * Constructor
@@ -63,8 +62,10 @@ public:
   * run - output the steering angle
   */
   double run();
-  void twiddle();
-  double runAheadError(double error_start);
+  
+  /*
+  * This updates the integral part with a queue for the sum
+  */
   void Update_i_error(double cte);
 };
 
