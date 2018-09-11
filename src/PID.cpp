@@ -27,7 +27,6 @@ void PID::Init(double Kp_input, double Ki_input, double Kd_input) {
 }
 
 void PID::UpdateError(double cte_input) {
-	numruns += 1;
 	cte = cte_input;	
 	p_error  = cte_input;	
 	Update_i_error(cte_input);
